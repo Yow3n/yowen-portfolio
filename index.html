@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yowen Naidoo - Professional Suite & Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#030712',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#d97706',
+                            600: '#b45309',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                        heading: ['Cinzel', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .print-shadow-none {
+                box-shadow: none !important;
+                border: none !important;
+            }
+            .document-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+        .active-tab {
+            border-bottom: 3px solid #b45309;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased min-h-screen">
+
+    <!-- Top Navigation Header (Hidden when printing) -->
+    <header class="no-print bg-slate-950 text-white shadow-xl sticky top-0 z-50 border-b border-gold-600/40">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-gold-600 flex items-center justify-center font-bold text-slate-950 text-lg shadow-lg ring-2 ring-gold-500/50">
+                    YN
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold tracking-wide font-heading text-white">YOWEN NAIDOO</h1>
+                    <p class="text-xs text-gold-400 font-medium">Professional Suite & Field Gallery</p>
+                </div>
+            </div>
+
+            <!-- Tab Selectors -->
+            <nav class="flex space-x-1 sm:space-x-2 bg-slate-900 p-1 rounded-xl border border-slate-800 text-xs sm:text-sm font-medium overflow-x-auto">
+                <button onclick="switchTab('exec-cv')" id="tab-exec-cv" class="px-3 py-2 rounded-lg transition text-slate-300 hover:text-white active-tab bg-slate-800 whitespace-nowrap">
+                    <i class="fa-solid fa-file-contract mr-1.5 text-gold-500"></i> Executive CV
+                </button>
+                <button onclick="switchTab('simple-cv')" id="tab-simple-cv" class="px-3 py-2 rounded-lg transition text-slate-300 hover:text-white whitespace-nowrap">
+                    <i class="fa-solid fa-file-lines mr-1.5 text-slate-400"></i> Streamlined CV
+                </button>
+                <button onclick="switchTab('flyer')" id="tab-flyer" class="px-3 py-2 rounded-lg transition text-slate-300 hover:text-white whitespace-nowrap">
+                    <i class="fa-solid fa-bullhorn mr-1.5 text-gold-500"></i> Freelance Flyer
+                </button>
+                <button onclick="switchTab('gallery')" id="tab-gallery" class="px-3 py-2 rounded-lg transition text-slate-300 hover:text-white whitespace-nowrap">
+                    <i class="fa-solid fa-camera-retro mr-1.5 text-gold-500"></i> Field Projects & Gallery
+                </button>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center space-x-2">
+                <button onclick="window.print()" class="bg-gold-600 hover:bg-gold-500 text-slate-950 px-4 py-2 rounded-lg text-xs sm:text-sm font-bold shadow-lg flex items-center gap-2 transition transform active:scale-95">
+                    <i class="fa-solid fa-print"></i> Print / Save PDF
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto py-8 px-4 sm:px-6">
+
+        <!-- ========================================================================================= -->
+        <!-- DOCUMENT 1: EXECUTIVE CV WITH COVER LETTERHEAD -->
+        <!-- ========================================================================================= -->
+        <div id="view-exec-cv" class="document-tab block">
+            <div class="document-container bg-white shadow-2xl rounded-xl overflow-hidden border border-slate-200 print-shadow-none">
+                
+                <!-- Elegant Letterhead Header -->
+                <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-800 text-white p-8 border-b-4 border-gold-600 relative">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+                            <img src="assets/1001843003.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x300/0f172a/fbbf24?text=Yowen+Naidoo';" alt="Yowen Naidoo" class="w-32 h-32 rounded-full object-cover border-2 border-gold-500 shadow-xl ring-4 ring-slate-800">
+                            <div>
+                                <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight font-heading text-white">YOWEN NAIDOO</h1>
+                                <p class="text-gold-500 font-medium text-sm sm:text-base mt-1 tracking-wider uppercase">Strategic Sales, Intermediary & Operations Professional</p>
+                                <div class="flex flex-wrap justify-center md:justify-start gap-y-1 gap-x-4 text-xs text-slate-300 mt-3">
+                                    <span><i class="fa-solid fa-location-dot text-gold-500 mr-1"></i> Based in KZN (Operational Throughout SA)</span>
+                                    <span><i class="fa-solid fa-phone text-gold-500 mr-1"></i> 061 496 9776</span>
+                                    <span><i class="fa-solid fa-envelope text-gold-500 mr-1"></i> naidooyowen@gmail.com</span>
+                                </div>
+                                <div class="mt-2 text-xs">
+                                    <a href="https://yowen-naidoo.vercel.app/" target="_blank" class="text-slate-300 hover:text-gold-500 underline flex items-center justify-center md:justify-start gap-1 font-semibold">
+                                        <i class="fa-solid fa-globe text-gold-500"></i> Yowen Naidoo - Professional Portfolio
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience Badge -->
+                        <div class="hidden lg:block bg-slate-800/80 p-4 rounded-xl border border-slate-700 text-center min-w-[180px]">
+                            <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold block">Experience</span>
+                            <span class="text-3xl font-extrabold text-gold-500">15+ Yrs</span>
+                            <span class="text-xs text-slate-300 block mt-1">Financial Services & Sales</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Executive CV Body Content -->
+                <div class="p-8 space-y-8">
+
+                    <!-- Professional Profile -->
+                    <section>
+                        <h2 class="text-lg font-bold text-slate-900 uppercase tracking-wide border-b-2 border-slate-200 pb-2 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-user-tie text-gold-600"></i> Executive Profile
+                        </h2>
+                        <p class="text-slate-700 text-sm leading-relaxed text-justify">
+                            A strategic sales, planning, and intermediary services professional with 15 years of progressive experience driving revenue, managing portfolios, and leading operations across entrepreneurial and corporate environments. Expertise encompasses personal, family, and commercial financial planning, alongside a proven track record of mentoring new advisors, coaching sales teams, and training administrative personnel. Combines deep technical understanding of insurance providers, products, systems, and regulations with an analytical problem-solving approach and a steadfast "client-first" philosophy.
+                        </p>
+                    </section>
+
+                    <!-- Core Competencies -->
+                    <section>
+                        <h2 class="text-lg font-bold text-slate-900 uppercase tracking-wide border-b-2 border-slate-200 pb-2 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-chart-line text-gold-600"></i> Core Competencies
+                        </h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 font-semibold text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-check text-gold-600"></i> Commercial Risk & Business Insurance
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 font-semibold text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-check text-gold-600"></i> Practice Operations & Strategy
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 font-semibold text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-check text-gold-600"></i> Advisor Mentorship & Leadership
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 font-semibold text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-check text-gold-600"></i> Portfolio Management & Analysis
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 font-semibold text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-check text-gold-600"></i> B2B Relationship Building
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 font-semibold text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-check text-gold-600"></i> Compliance & RE5 Knowledge
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 font-semibold text-slate-800 flex items-center gap-2">
+                                <i class="fa-solid fa-check text-gold-600"></i> Field Activations & Community Outreach
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Career History -->
+                    <section>
+                        <h2 class="text-lg font-bold text-slate-900 uppercase tracking-wide border-b-2 border-slate-200 pb-2 mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase text-gold-600"></i> Professional Experience
+                        </h2>
+
+                        <div class="space-y-6">
+
+                            <!-- Role 1 -->
+                            <div class="relative pl-6 border-l-2 border-gold-600">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gold-600 border-2 border-white"></div>
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                                    <h3 class="text-base font-bold text-slate-900">Business Insurance Specialist</h3>
+                                    <span class="text-xs font-semibold text-gold-600 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200">Mid-2026 – Present</span>
+                                </div>
+                                <p class="text-xs font-bold text-slate-600 mb-2">MiWay Insurance</p>
+                                <ul class="list-disc list-inside text-xs text-slate-700 space-y-1.5 leading-relaxed">
+                                    <li>Focus on commercial risk mitigation and acquisition for business owners within a high-performance B2B environment.</li>
+                                    <li>Translate complex corporate risk exposures into tailored, sustainable insurance strategies.</li>
+                                    <li>Partner directly with business leaders to build long-term risk management and protective solutions.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 2 -->
+                            <div class="relative pl-6 border-l-2 border-slate-300">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 border-2 border-white"></div>
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                                    <h3 class="text-base font-bold text-slate-900">Strategic Portfolio Specialist</h3>
+                                    <span class="text-xs font-semibold text-slate-500">Mid-2024 – Mid-2026</span>
+                                </div>
+                                <p class="text-xs font-bold text-slate-600 mb-2">Berghshire Wealth KZN (Sanlam Franchise)</p>
+                                <ul class="list-disc list-inside text-xs text-slate-700 space-y-1.5 leading-relaxed">
+                                    <li>Collaborated with executive leadership and back-office infrastructure across a top-performing national franchise.</li>
+                                    <li>Delivered high-tier strategic portfolio solutions to affluent, commercial, and retail clients.</li>
+                                    <li>Ensured flawless client continuity and high-touch portfolio maintenance prior to transitioning to specialized commercial risk.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 3 -->
+                            <div class="relative pl-6 border-l-2 border-slate-300">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 border-2 border-white"></div>
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                                    <h3 class="text-base font-bold text-slate-900">Authorized Principal</h3>
+                                    <span class="text-xs font-semibold text-slate-500">2022 – Mid-2024</span>
+                                </div>
+                                <p class="text-xs font-bold text-slate-600 mb-2">Kalika Konsulting (Sanlam Franchise)</p>
+                                <ul class="list-disc list-inside text-xs text-slate-700 space-y-1.5 leading-relaxed">
+                                    <li>Headhunted to lead practice launch, operational strategy, advisor recruitment, and onboarding as the youngest Franchise Principal at Sanlam (MOB).</li>
+                                    <li>Directed team management, joint consultations, and active field coaching across all sales avenues.</li>
+                                    <li>Spearheaded innovative brand activation projects, including free <strong>Financial Wellness Days in Nongoma (2023)</strong> and <strong>Hillcrest</strong>—setting up mobile Sanlam consultation hubs in rural and local communities to provide financial literacy, health screenings, and accessible insurance platforms.</li>
+                                    <li>Balanced day-to-day practice building with client acquisition, securing an academic bursary from Sanlam.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 4 -->
+                            <div class="relative pl-6 border-l-2 border-slate-300">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 border-2 border-white"></div>
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                                    <h3 class="text-base font-bold text-slate-900">Independent Financial Advisor</h3>
+                                    <span class="text-xs font-semibold text-slate-500">Mid-2015 – 2022</span>
+                                </div>
+                                <p class="text-xs font-bold text-slate-600 mb-2">Masthead Intermediary Services</p>
+                                <ul class="list-disc list-inside text-xs text-slate-700 space-y-1.5 leading-relaxed">
+                                    <li>Practiced independently for seven years, holding contracts with leading insurers including Old Mutual, Momentum, Liberty, Discovery, PPS, Hollard, Brightrock, and Sanlam.</li>
+                                    <li>Managed a diverse portfolio, mastering product mechanics, competitive analysis, and client retention across middle-market, affluent, and corporate profiles.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Role 5 -->
+                            <div class="relative pl-6 border-l-2 border-slate-300">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-400 border-2 border-white"></div>
+                                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                                    <h3 class="text-base font-bold text-slate-900">Practice Management & Operations Associate</h3>
+                                    <span class="text-xs font-semibold text-slate-500">2011 – Mid-2015</span>
+                                </div>
+                                <p class="text-xs font-bold text-slate-600 mb-2">Infin Consulting</p>
+                                <ul class="list-disc list-inside text-xs text-slate-700 space-y-1.5 leading-relaxed">
+                                    <li>Mentored directly by the Key Individual to master practice management, operational strategy, and administrative precision supporting high-volume sales.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- Qualifications -->
+                    <section>
+                        <h2 class="text-lg font-bold text-slate-900 uppercase tracking-wide border-b-2 border-slate-200 pb-2 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap text-gold-600"></i> Qualifications & Education
+                        </h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+                                <span class="font-bold text-slate-900 block text-sm">Regulatory Exam 5 (RE5) Certification</span>
+                                <span class="text-slate-600">Financial Services Conduct Authority (FSCA) / FSB</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+                                <span class="font-bold text-slate-900 block text-sm">Wealth Management Qualification</span>
+                                <span class="text-slate-600">Formal NQF Qualification / Higher Certificate</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+                                <span class="font-bold text-slate-900 block text-sm">National Senior Certificate (Grade 12)</span>
+                                <span class="text-slate-600">Matric distinction in Mathematics</span>
+                            </div>
+                            <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg">
+                                <span class="font-bold text-slate-900 block text-sm">Tertiary Engineering Studies</span>
+                                <span class="text-slate-600">Technical Foundation & Electrical Background</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Personal Attributes, Health & Community Involvement -->
+                    <section>
+                        <h2 class="text-lg font-bold text-slate-900 uppercase tracking-wide border-b-2 border-slate-200 pb-2 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-heart-pulse text-gold-600"></i> Personal Attributes, Health & Community Involvement
+                        </h2>
+                        <div class="bg-amber-50/50 border border-amber-200 rounded-xl p-5 text-xs text-slate-700 space-y-3">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-hand-holding-heart text-gold-600 text-base mt-0.5"></i>
+                                <div>
+                                    <strong class="text-slate-900 block text-sm">Community Leadership & Youth Advocacy:</strong>
+                                    Vice Chairperson of the Chatsworth Youth Forum. Organized youth empowerment, educational, and holiday programs for underprivileged children via the <em>Helping Hands Volunteer Youth Program</em>. Active volunteer with <strong>Child Welfare since 2003</strong>, advocating for child safety and social welfare.
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 border-t border-amber-200/60 pt-3">
+                                <i class="fa-solid fa-dumbbell text-gold-600 text-base mt-0.5"></i>
+                                <div>
+                                    <strong class="text-slate-900 block text-sm">Personal Discipline & Health:</strong>
+                                    Exceptional health and consistently monitored fit BMI. Dedicated to daily physical discipline including boxing, long-distance running, and weight training.
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 border-t border-amber-200/60 pt-3">
+                                <i class="fa-solid fa-shield-halved text-gold-600 text-base mt-0.5"></i>
+                                <div>
+                                    <strong class="text-slate-900 block text-sm">Personal Details & Integrity:</strong>
+                                    Unmarried | Clear Criminal Record | Valid South African Driver's License | Based in KZN (Operational Throughout SA) | Open to Relocation, Remote, Hybrid, or On-Site opportunities. References from past employers available upon request.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Key Initiatives & Brand Activations -->
+                    <section>
+                        <h2 class="text-lg font-bold text-slate-900 uppercase tracking-wide border-b-2 border-slate-200 pb-2 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-bullseye text-gold-600"></i> Strategic Marketing Activations (Nongoma 2023 & Hillcrest)
+                        </h2>
+                        <div class="bg-slate-900 text-white rounded-xl p-5 text-xs space-y-4">
+                            <div class="flex flex-col sm:flex-row gap-4 items-start">
+                                <img src="assets/1001659325.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/fbbf24?text=Nongoma+Sanlam+Activation';" alt="Sanlam Nongoma Activation" class="w-full sm:w-40 h-28 object-cover rounded-lg border border-gold-500/40 shadow">
+                                <div class="space-y-1.5">
+                                    <h3 class="text-sm font-bold text-gold-400">Nongoma 2023 & Hillcrest Financial Wellness Drives</h3>
+                                    <p class="text-slate-300 leading-relaxed">
+                                        Conceived and executed grassroots Sanlam brand activations across Nongoma (2023) and Hillcrest, bringing free financial education and advisory platforms to communities. Coordinated mobile consultation tents, municipal collaboration, and emergency service presence to make insurance accessible and build long-term trust.
+                                    </p>
+                                    <button onclick="switchTab('gallery')" class="text-gold-400 hover:text-gold-300 underline font-semibold flex items-center gap-1 mt-1">
+                                        <i class="fa-solid fa-images"></i> View Photo Gallery & Project Details →
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ========================================================================================= -->
+        <!-- DOCUMENT 2: STREAMLINED SIMPLE CV -->
+        <!-- ========================================================================================= -->
+        <div id="view-simple-cv" class="document-tab hidden">
+            <div class="document-container bg-white shadow-2xl rounded-xl overflow-hidden border border-slate-200 p-8 sm:p-10 print-shadow-none">
+                
+                <!-- Clean Simple Header -->
+                <div class="border-b-2 border-slate-900 pb-6 mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <h1 class="text-3xl font-bold text-slate-900 tracking-tight font-heading">YOWEN NAIDOO</h1>
+                        <p class="text-slate-600 font-semibold text-sm">Sales & Operations Representative / Team Lead</p>
+                    </div>
+                    <div class="text-left sm:text-right text-xs text-slate-600 space-y-1">
+                        <p><i class="fa-solid fa-phone text-slate-800 mr-1"></i> 061 496 9776</p>
+                        <p><i class="fa-solid fa-envelope text-slate-800 mr-1"></i> naidooyowen@gmail.com</p>
+                        <p><i class="fa-solid fa-location-dot text-slate-800 mr-1"></i> Based in KZN (Operational Throughout SA)</p>
+                        <p><a href="https://yowen-naidoo.vercel.app/" target="_blank" class="text-slate-800 hover:underline font-medium"><i class="fa-solid fa-globe text-slate-800 mr-1"></i> Yowen Naidoo - Professional Portfolio</a></p>
+                    </div>
+                </div>
+
+                <!-- Summary -->
+                <div class="mb-6">
+                    <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Professional Summary</h2>
+                    <p class="text-xs text-slate-700 leading-relaxed">
+                        Reliable, results-driven professional with over a decade of hands-on experience in customer service, sales administration, client relationship management, and team support. Strong technical aptitude combined with a background in practice support, staff coaching, and operational efficiency. Seeking a stable sales, operations, or administrative role where I can deliver immediate value and consistent results.
+                    </p>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="mb-6 space-y-4">
+                    <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-3">Work Experience</h2>
+
+                    <div>
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-xs font-bold text-slate-900">Commercial Insurance Representative</h3>
+                            <span class="text-xs text-slate-500">2026 – Present</span>
+                        </div>
+                        <p class="text-xs text-slate-600 italic">MiWay Insurance</p>
+                        <ul class="list-disc list-inside text-xs text-slate-700 mt-1 space-y-1">
+                            <li>Manage client accounts, risk assessments, and commercial insurance administration.</li>
+                            <li>Build strong B2B relationships through responsive service and problem-solving.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-xs font-bold text-slate-900">Client Service & Portfolio Assistant</h3>
+                            <span class="text-xs text-slate-500">2024 – 2026</span>
+                        </div>
+                        <p class="text-xs text-slate-600 italic">Sanlam Franchise Network</p>
+                        <ul class="list-disc list-inside text-xs text-slate-700 mt-1 space-y-1">
+                            <li>Provided client onboarding, portfolio administration, and direct customer support.</li>
+                            <li>Ensured accurate records and smooth communication between back-office and clients.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-xs font-bold text-slate-900">Operations & Team Lead</h3>
+                            <span class="text-xs text-slate-500">2022 – 2024</span>
+                        </div>
+                        <p class="text-xs text-slate-600 italic">Financial Services Practice</p>
+                        <ul class="list-disc list-inside text-xs text-slate-700 mt-1 space-y-1">
+                            <li>Handled office administration, staff onboarding, meeting schedules, and client consultations.</li>
+                            <li>Coached team members and maintained high standards of operational accuracy.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-xs font-bold text-slate-900">Client Sales Representative</h3>
+                            <span class="text-xs text-slate-500">2015 – 2022</span>
+                        </div>
+                        <p class="text-xs text-slate-600 italic">Masthead Network / Self-Employed</p>
+                        <ul class="list-disc list-inside text-xs text-slate-700 mt-1 space-y-1">
+                            <li>Assisted individual and business clients with financial products and insurance solutions.</li>
+                            <li>Built long-term client trust through transparent advice and regular communication.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="text-xs font-bold text-slate-900">Administrative Assistant</h3>
+                            <span class="text-xs text-slate-500">2011 – 2015</span>
+                        </div>
+                        <p class="text-xs text-slate-600 italic">Infin Consulting</p>
+                        <ul class="list-disc list-inside text-xs text-slate-700 mt-1 space-y-1">
+                            <li>Executed daily office administration, filing, client record maintenance, and correspondence.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education & Skills -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Education & Certification</h2>
+                        <ul class="text-xs text-slate-700 space-y-1">
+                            <li>• Regulatory Exam 5 (RE5)</li>
+                            <li>• Wealth Management NQF Qualification</li>
+                            <li>• Grade 12 / Matric (Distinction in Math)</li>
+                            <li>• Valid Driver's License</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Key Skills</h2>
+                        <ul class="text-xs text-slate-700 space-y-1">
+                            <li>• Customer Service & Relationship Building</li>
+                            <li>• Office Administration & Document Accuracy</li>
+                            <li>• Team Support & Field Mentorship</li>
+                            <li>• Adaptability & Problem Solving</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Personal & Community -->
+                <div>
+                    <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Community & Personal Details</h2>
+                    <p class="text-xs text-slate-700 leading-relaxed">
+                        Active volunteer worker for Child Welfare (since 2003) and Vice Chairperson of the Chatsworth Youth Forum. Clear criminal record, excellent physical fitness, unmarried, and ready to start immediately. References available upon request.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ========================================================================================= -->
+        <!-- DOCUMENT 3: FREELANCE CONSULTING FLYER -->
+        <!-- ========================================================================================= -->
+        <div id="view-flyer" class="document-tab hidden">
+            <div class="document-container bg-slate-950 text-white rounded-2xl shadow-2xl overflow-hidden border border-gold-600/50 print-shadow-none">
+                
+                <!-- Flyer Header -->
+                <div class="relative bg-gradient-to-br from-slate-900 via-slate-950 to-black p-8 sm:p-12 text-center border-b border-gold-600/40">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent"></div>
+                    
+                    <div class="flex justify-center mb-6">
+                        <img src="assets/1001843003.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x300/0f172a/fbbf24?text=Yowen+Naidoo';" alt="Yowen Naidoo" class="w-36 h-36 rounded-full object-cover border-4 border-gold-500 shadow-2xl ring-4 ring-gold-500/20">
+                    </div>
+
+                    <span class="text-xs font-bold uppercase tracking-widest text-gold-400 bg-gold-600/20 px-3 py-1 rounded-full border border-gold-500/30">
+                        Freelance & Practice Advisory
+                    </span>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold font-heading text-white mt-3">YOWEN NAIDOO CONSULTING</h1>
+                    <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-xl mx-auto italic">
+                        "Bridging Technical Strategy, Sales Mentorship, and Practice Management"
+                    </p>
+                </div>
+
+                <!-- Flyer Content Services -->
+                <div class="p-8 sm:p-10 space-y-8">
+
+                    <div class="text-center max-w-2xl mx-auto">
+                        <h2 class="text-lg font-bold text-gold-400 uppercase tracking-wider mb-2">Elevate Your Team & Streamline Operations</h2>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            Available for short-term contracts, team workshops, joint call coaching, and practice development consulting for financial services providers, brokerages, and sales agencies.
+                        </p>
+                    </div>
+
+                    <!-- Services Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl hover:border-gold-500/50 transition">
+                            <div class="w-10 h-10 rounded-lg bg-gold-600/20 flex items-center justify-center text-gold-500 mb-4 text-lg">
+                                <i class="fa-solid fa-chalkboard-user"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white mb-2">Sales & Advisor Coaching</h3>
+                            <ul class="text-xs text-slate-400 space-y-1.5 leading-relaxed">
+                                <li>• Joint client call mentorship</li>
+                                <li>• Objection handling & closing</li>
+                                <li>• B2B & retail pipeline building</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl hover:border-gold-500/50 transition">
+                            <div class="w-10 h-10 rounded-lg bg-gold-600/20 flex items-center justify-center text-gold-500 mb-4 text-lg">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white mb-2">Practice Strategy & Admin</h3>
+                            <ul class="text-xs text-slate-400 space-y-1.5 leading-relaxed">
+                                <li>• Operational workflow design</li>
+                                <li>• Back-office efficiency & compliance</li>
+                                <li>• Advisor onboarding systems</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl hover:border-gold-500/50 transition">
+                            <div class="w-10 h-10 rounded-lg bg-gold-600/20 flex items-center justify-center text-gold-500 mb-4 text-lg">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+                            <h3 class="text-sm font-bold text-white mb-2">Brand & Field Activations</h3>
+                            <ul class="text-xs text-slate-400 space-y-1.5 leading-relaxed">
+                                <li>• Community outreach drives</li>
+                                <li>• Mobile consultation hubs</li>
+                                <li>• Field sales event management</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Footer Banner -->
+                    <div class="bg-gradient-to-r from-gold-600 to-amber-600 text-slate-950 p-6 rounded-xl text-center space-y-2">
+                        <h3 class="text-base font-extrabold uppercase tracking-wide">Ready to Discuss a Collaboration?</h3>
+                        <p class="text-xs font-semibold">Flexible Rates • Project-Based • Retainer • Hourly Consulting</p>
+                        <div class="pt-2 flex flex-wrap justify-center gap-4 text-xs font-bold">
+                            <span><i class="fa-solid fa-location-dot mr-1"></i> Based in KZN (Operational Throughout SA)</span>
+                            <span><i class="fa-solid fa-phone mr-1"></i> 061 496 9776</span>
+                            <span><i class="fa-solid fa-envelope mr-1"></i> naidooyowen@gmail.com</span>
+                            <a href="https://yowen-naidoo.vercel.app/" target="_blank" class="hover:underline flex items-center gap-1">
+                                <i class="fa-solid fa-globe mr-1"></i> Yowen Naidoo - Professional Portfolio
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ========================================================================================= -->
+        <!-- DOCUMENT 4: FIELD PROJECTS & PHOTO GALLERY -->
+        <!-- ========================================================================================= -->
+        <div id="view-gallery" class="document-tab hidden">
+            <div class="document-container bg-white shadow-2xl rounded-xl overflow-hidden border border-slate-200 p-6 sm:p-8 print-shadow-none">
+                
+                <div class="border-b border-slate-200 pb-4 mb-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-gold-600 block">Field Portfolio & Impact</span>
+                        <h2 class="text-2xl font-bold text-slate-900 font-heading">Sanlam Wellness Days & Community Brand Activations</h2>
+                        <p class="text-xs text-slate-600 mt-1">
+                            Grassroots marketing, community financial literacy drives, and rural market penetration initiatives developed during my leadership tenure with Sanlam franchises.
+                        </p>
+                    </div>
+                    <div class="bg-slate-100 p-3 rounded-lg border border-slate-200 text-xs text-slate-700 font-medium">
+                        <i class="fa-solid fa-layer-group text-gold-600 mr-1.5"></i> Categorized Field Records
+                    </div>
+                </div>
+
+                <!-- Showcase Grid 1: Nongoma Wellness Days 2023 -->
+                <div class="space-y-6 mb-10">
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3 border-b border-slate-200 pb-2">
+                            <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                                <i class="fa-solid fa-hands-holding-circle text-gold-600"></i>
+                                Wellness Days – Nongoma 2023
+                            </h3>
+                            <span class="text-xs font-bold text-gold-600 bg-amber-100 px-2.5 py-0.5 rounded-full">
+                                Rural Financial Literacy Drive
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed mb-5">
+                            Designed and executed an inclusive outreach program in Nongoma in 2023 to bridge the gap in financial literacy and insurance accessibility. By erecting Sanlam-branded consultation hubs in rural centers and partnering with local health and emergency services, we provided an open platform where community members could access free financial advice, review policy options, and safeguard their families' futures.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="space-y-2 bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
+                                <img src="assets/1001659326.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/fbbf24?text=Nongoma+2023+Site';" alt="Nongoma Event Site 2023" class="w-full h-48 object-cover rounded border border-slate-200">
+                                <p class="text-[11px] font-semibold text-slate-700 text-center">Nongoma 2023 Event Site & Sanlam Branding Banners</p>
+                            </div>
+                            <div class="space-y-2 bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
+                                <img src="assets/1001659328.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/fbbf24?text=Health+Partner+Collaboration';" alt="Community Health & Financial Hub" class="w-full h-48 object-cover rounded border border-slate-200">
+                                <p class="text-[11px] font-semibold text-slate-700 text-center">Community Hub & Health Partner Collaboration</p>
+                            </div>
+                            <div class="space-y-2 bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
+                                <img src="assets/1001659329.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/fbbf24?text=On-Site+Consultations';" alt="On-Site Consultations" class="w-full h-48 object-cover rounded border border-slate-200">
+                                <p class="text-[11px] font-semibold text-slate-700 text-center">On-Site Advisory & Registration Stations</p>
+                            </div>
+                            <div class="space-y-2 bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
+                                <img src="assets/1001659331.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/fbbf24?text=Community+Gathering';" alt="Community Gathering" class="w-full h-48 object-cover rounded border border-slate-200">
+                                <p class="text-[11px] font-semibold text-slate-700 text-center">Grassroots Community Engagement & Education</p>
+                            </div>
+                            <div class="space-y-2 bg-white p-2 rounded-lg border border-slate-200 shadow-sm sm:col-span-2 md:col-span-2">
+                                <img src="assets/1001659325.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/fbbf24?text=Yowen+Naidoo+Sanlam+Hub';" alt="Yowen Naidoo at Sanlam Station" class="w-full h-48 object-cover rounded border border-slate-200">
+                                <p class="text-[11px] font-semibold text-slate-700 text-center">Yowen Naidoo Directing Consultation Operations in Nongoma 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase Grid 2: Hillcrest Wellness Days -->
+                <div class="space-y-6 mb-10">
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3 border-b border-slate-200 pb-2">
+                            <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                                <i class="fa-solid fa-location-dot text-gold-600"></i>
+                                Wellness Days – Hillcrest Activations
+                            </h3>
+                            <span class="text-xs font-bold text-slate-700 bg-slate-200 px-2.5 py-0.5 rounded-full">
+                                Community Outreach & Engagement
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed mb-5">
+                            Tailored financial consultation setups brought directly into community spaces across Hillcrest. Provided structured financial literacy, insurance policy reviews, and strategic risk guidance for families and local business leaders.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="space-y-2 bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
+                                <img src="assets/1001839900.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/fbbf24?text=Hillcrest+Consultations';" alt="Hillcrest Wellness Day Engagement" class="w-full h-48 object-cover rounded border border-slate-200">
+                                <p class="text-[11px] font-semibold text-slate-700 text-center">Executive Client Focus & Consultation Readiness</p>
+                            </div>
+                            <div class="space-y-2 bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
+                                <img src="assets/1001839899.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/fbbf24?text=Hillcrest+Advisory';" alt="Hillcrest Advisory Presence" class="w-full h-48 object-cover rounded border border-slate-200">
+                                <p class="text-[11px] font-semibold text-slate-700 text-center">On-Site Client Advisory Operations</p>
+                            </div>
+                            <div class="space-y-2 bg-white p-2.5 rounded-lg border border-dashed border-gold-500/60 bg-amber-50/50 flex flex-col justify-center items-center text-center p-6">
+                                <i class="fa-solid fa-images text-gold-600 text-2xl mb-2"></i>
+                                <span class="text-xs font-bold text-slate-900 block">Hillcrest Image Archive</span>
+                                <p class="text-[11px] text-slate-600 mt-1">Additional high-resolution field photos ready for display upon request.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase Grid 3: Professional Leadership & Strategic Execution -->
+                <div class="border-t border-slate-200 pt-6">
+                    <h3 class="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-user-tie text-gold-600"></i>
+                        Professional Leadership, Practice Strategy & Events
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="space-y-2 bg-slate-50 p-2 rounded-lg border border-slate-200">
+                            <img src="assets/1001659346.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/fbbf24?text=Strategy+%26+Training';" alt="Strategy & Practice Planning" class="w-full h-44 object-cover rounded border border-slate-200">
+                            <p class="text-[11px] font-semibold text-slate-700 text-center">Practice Strategy & Training Operations</p>
+                        </div>
+                        <div class="space-y-2 bg-slate-50 p-2 rounded-lg border border-slate-200">
+                            <img src="assets/1001389667.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/fbbf24?text=Corporate+Representation';" alt="Corporate & Industry Events" class="w-full h-44 object-cover rounded border border-slate-200">
+                            <p class="text-[11px] font-semibold text-slate-700 text-center">Corporate Industry Representation</p>
+                        </div>
+                        <div class="space-y-2 bg-slate-50 p-2 rounded-lg border border-slate-200">
+                            <img src="assets/1001668261.jpg" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/fbbf24?text=Executive+Leadership';" alt="Executive Leadership Presence" class="w-full h-44 object-cover rounded border border-slate-200">
+                            <p class="text-[11px] font-semibold text-slate-700 text-center">Executive Field Leadership</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- JavaScript for Tab Switching -->
+    <script>
+        function switchTab(tabId) {
+            // Hide all documents
+            document.querySelectorAll('.document-tab').forEach(el => {
+                el.classList.add('hidden');
+                el.classList.remove('block');
+            });
+
+            // Reset tab button styles
+            document.querySelectorAll('nav button').forEach(btn => {
+                btn.classList.remove('active-tab', 'bg-slate-800', 'text-white');
+                btn.classList.add('text-slate-300');
+            });
+
+            // Show selected document
+            const targetDoc = document.getElementById('view-' + tabId);
+            if (targetDoc) {
+                targetDoc.classList.remove('hidden');
+                targetDoc.classList.add('block');
+            }
+
+            // Highlight selected tab
+            const targetBtn = document.getElementById('tab-' + tabId);
+            if (targetBtn) {
+                targetBtn.classList.add('active-tab', 'bg-slate-800', 'text-white');
+                targetBtn.classList.remove('text-slate-300');
+            }
+        }
+    </script>
+</body>
+</html>
